@@ -1,0 +1,257 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>修复 Windows 中的网络连接问题 at Cortmiem - A blessing to this wonderful world!</title>
+<link rel="shortcut icon" href="https://cortmiem.github.io/favicon.ico?v=1597983604873">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cortmiem.github.io/styles/main.css">
+<link rel="alternate" type="application/atom+xml" title="修复 Windows 中的网络连接问题 at Cortmiem - A blessing to this wonderful world! - Atom Feed" href="https://cortmiem.github.io/atom.xml">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
+<script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+
+
+
+    <meta name="description" content="学者沃·兹基·燕鸠德的报告指出：
+
+电脑维修：重启解决90%问题，重装解决99%问题，重买解决100%问题。
+
+
+一般方案
+检查线路连接
+在命令提示符中运行以¹获取网关、²测试网关连接：
+ipconfig
+ping 192.168.1.1
+..." />
+    <meta name="keywords" content="" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+    <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+  </head>
+  <body>
+    <div class="main">
+      <div class="main-content">
+        <div class="site-header">
+<!--
+  <a href="https://cortmiem.github.io">
+  <img class="avatar" src="https://cortmiem.github.io/images/avatar.png?v=1597983604873" alt="">
+  </a>
+  <h1 class="site-title">
+    时光静好Demo
+  </h1>
+-->
+  <p class="site-description">
+    僕は存在していなかった
+  </p>
+  <div class="menu-container">
+    
+      
+        <a href="/" class="menu">
+          ホームページ
+        </a>
+      
+    
+      
+        <a href="/archives" class="menu">
+          アーカイブ
+        </a>
+      
+    
+      
+        <a href="/tags" class="menu">
+          ラベル
+        </a>
+      
+    
+      
+        <a href="https://cortmiem.github.io/post/oshirase" class="menu">
+          お知らせ
+        </a>
+      
+    
+      
+        <a href="https://cortmiem.gitee.io/megumi/" class="menu" target="_blank">
+          加藤恵
+        </a>
+      
+    
+      
+        <a href="https://cortmiem.github.io/post/message" class="menu">
+          伝言板
+        </a>
+      
+    
+  </div>
+  <div class="social-container">
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+
+        <div class="post-detail">
+          <article class="post">
+            <h2 class="post-title">
+              修复 Windows 中的网络连接问题
+            </h2>
+            <div class="post-info">
+              <span>
+                2020-08-16
+              </span>
+              <span>
+                3 min read
+              </span>
+              
+            </div>
+            
+              <img class="post-feature-image" src="https://cortmiem.github.io/post-images/Windows-Internet-Fix.jpg" alt="">
+            
+            <div class="post-content-wrapper">
+              <div class="post-content">
+                <p><strong>学者沃·兹基·燕鸠德的报告指出：</strong></p>
+<blockquote>
+<p>电脑维修：重启解决90%问题，重装解决99%问题，重买解决100%问题。</p>
+</blockquote>
+<!-- more -->
+<h2 id="一般方案">一般方案</h2>
+<h3 id="检查线路连接">检查线路连接</h3>
+<p>在<strong>命令提示符</strong>中运行以¹获取网关、²测试网关连接：</p>
+<pre><code>ipconfig
+ping 192.168.1.1
+</code></pre>
+<p>根据微软官方文件<a href="https://support.microsoft.com/zh-cn/help/10741/windows-fix-network-connection-issues" title="微软官方文件">微软官方文件</a>（有删改）：</p>
+<blockquote>
+<p>如果你收到回复，则表明你已连接到 Wi-Fi 路由器，因此可能是你的调制解调器或 ISP 有问题。请联系你的 ISP，或者在另一台设备上联机检查（如果可以），看看是否存在服务中断。<br>
+如果 ping 测试的结果指出你未收到路由器的回复，请尝试使用以太网电缆将你的电脑直接连接到调制解调器（如果可以）。如果你可以使用以太网电缆连接到 Internet，它会确认连接问题是由 Wi-Fi 路由器引起的。请确保你已安装最新固件，并查看路由器的相关文档。</p>
+</blockquote>
+<h3 id="运行网络命令">运行网络命令</h3>
+<p>在<strong>命令提示符</strong>中运行以¹手动重置 TCP/IP 堆栈、²释放并续订 IP 地址，³⁴⁵刷新并重置 DNS 客户端解析程序缓存：</p>
+<pre><code>netsh winsock reset
+netsh int ip reset
+ipconfig /release
+ipconfig /renew
+ipconfig /flushdns
+</code></pre>
+<h3 id="检查操作系统">检查操作系统</h3>
+<p>使用<strong>其他操作系统或环境</strong>进行网络连接（如：Porteus、CDLinux、带网络连接Windows PE）</p>
+<h3 id="使用三方软件">使用三方软件</h3>
+<p>以上步骤可部分使用三方软件代替。</p>
+<ul>
+<li>360、电脑管家等（不推荐）；</li>
+<li><a href="https://cort.lanzous.com/ikYYhfoxrmb" title="ComIntRep">ComIntRep</a>（Complete Internet Repair）<br>
+该软件可以¹重置 Internet 协议（TCP/ IP 协议）、²修复 Winsock、³更新互联网连接、⁴刷新 DNS 解析器缓存、⁵刷新 ARP 缓存、⁶修复 Internet Explorer、⁷清除 Windows 更新历史记录、⁸修复 Windows 自动更新、⁹修复的 SSL / HTTPS 加密、⁰重置代理服务器配置、¹¹重置 Windows 防火墙配置、¹²恢复默认的 hosts 文件、¹³修复查看工作组计算机</li>
+</ul>
+<h2 id="特殊情况">特殊情况</h2>
+<p><strong>使用代理进行科学上网后使用代理进行科学上网后（此计算机上缺少一个或者多个网络协议）：</strong></p>
+<ul>
+<li>重新启动代理服务应用程序（如 Shadowsocksr）；</li>
+<li>关闭代理设置脚本、停用代理服务器：</li>
+<li>位于“Windows设置 - 网络和Internet - 代理”；</li>
+<li>删除注册表中的连接信息（删除 Connections 项下除默认以外的所有值）。</li>
+</ul>
+<pre><code>HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Internet Settings\Connections
+</code></pre>
+<p><strong>使用WLAN连接的台式机用户：</strong></p>
+<ul>
+<li>断开 RJ45 网络电缆线（网线）；</li>
+<li>停用本地连接或有线网络适配器：<br>
+位于“控制面板 - 网络和 Internet - 网络和共享中心 - 更改适配器设置”。</li>
+</ul>
+<p><strong>使用笔记本电脑的用户：</strong></p>
+<p>请确保你的笔记本电脑上的<strong>物理 Wi‑Fi 开关</strong>已打开。（当它处于打开状态时，指示灯通常会亮起。）<br>
+使用 Fiddler 4 解除 UWP 应用的网络隔离<br>
+位于“Fiddler 4 - winConfig - Exempt All - Save Changes”。</p>
+
+              </div>
+              <div class="toc-container">
+                <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li><a href="#%E4%B8%80%E8%88%AC%E6%96%B9%E6%A1%88">一般方案</a>
+<ul>
+<li><a href="#%E6%A3%80%E6%9F%A5%E7%BA%BF%E8%B7%AF%E8%BF%9E%E6%8E%A5">检查线路连接</a></li>
+<li><a href="#%E8%BF%90%E8%A1%8C%E7%BD%91%E7%BB%9C%E5%91%BD%E4%BB%A4">运行网络命令</a></li>
+<li><a href="#%E6%A3%80%E6%9F%A5%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F">检查操作系统</a></li>
+<li><a href="#%E4%BD%BF%E7%94%A8%E4%B8%89%E6%96%B9%E8%BD%AF%E4%BB%B6">使用三方软件</a></li>
+</ul>
+</li>
+<li><a href="#%E7%89%B9%E6%AE%8A%E6%83%85%E5%86%B5">特殊情况</a></li>
+</ul>
+</li>
+</ul>
+
+              </div>
+            </div>
+          </article>
+        </div>
+
+        
+    <div id="vcomments"></div>
+    <script>
+        new Valine({
+            el: '#vcomments',
+            appId: 'sqfCfeacoIYkQyqjUNFp7Fir-gzGzoHsz',
+            appKey: 'VYlaChugKgP3mflQmI6TI2Xr'
+        })
+    </script>
+        
+
+        <div class="site-footer">
+  <script src="https://v1.hitokoto.cn/?c=a&c=b&encode=js&select=%23hitokoto" defer></script>
+<p id="hitokoto"><a href="#" id="hitokoto_text">:D 少女祈祷中...</a></p>
+  <a class="rss" href="https://cortmiem.github.io/atom.xml" target="_blank">
+    <i class="rss"></i>'Created by Cortmiem.
+  </a>
+</div>
+      </div>
+    </div>
+
+    <script>
+      hljs.initHighlightingOnLoad()
+
+      let mainNavLinks = document.querySelectorAll(".markdownIt-TOC a");
+
+      // This should probably be throttled.
+      // Especially because it triggers during smooth scrolling.
+      // https://lodash.com/docs/4.17.10#throttle
+      // You could do like...
+      // window.addEventListener("scroll", () => {
+      //    _.throttle(doThatStuff, 100);
+      // });
+      // Only not doing it here to keep this Pen dependency-free.
+
+      window.addEventListener("scroll", event => {
+        let fromTop = window.scrollY;
+
+        mainNavLinks.forEach((link, index) => {
+          let section = document.getElementById(decodeURI(link.hash).substring(1));
+          let nextSection = null
+          if (mainNavLinks[index + 1]) {
+            nextSection = document.getElementById(decodeURI(mainNavLinks[index + 1].hash).substring(1));
+          }
+          if (section.offsetTop <= fromTop) {
+            if (nextSection) {
+              if (nextSection.offsetTop > fromTop) {
+                link.classList.add("current");
+              } else {
+                link.classList.remove("current");    
+              }
+            } else {
+              link.classList.add("current");
+            }
+          } else {
+            link.classList.remove("current");
+          }
+        });
+      });
+
+    </script>
+  </body>
+</html>

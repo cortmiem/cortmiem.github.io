@@ -2,12 +2,13 @@
   <head>
     <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>お知らせ | 时光静好Demo</title>
-<link rel="shortcut icon" href="https://cortmiem.github.io/favicon.ico?v=1597558438126">
+<title>お知らせ at Cortmiem - A blessing to this wonderful world!</title>
+<link rel="shortcut icon" href="https://cortmiem.github.io/favicon.ico?v=1597983604873">
 <link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
 <link rel="stylesheet" href="https://cortmiem.github.io/styles/main.css">
-<link rel="alternate" type="application/atom+xml" title="お知らせ | 时光静好Demo - Atom Feed" href="https://cortmiem.github.io/atom.xml">
+<link rel="alternate" type="application/atom+xml" title="お知らせ at Cortmiem - A blessing to this wonderful world! - Atom Feed" href="https://cortmiem.github.io/atom.xml">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
+<script src='//unpkg.com/valine/dist/Valine.min.js'></script>
 
 
 
@@ -27,12 +28,14 @@ Freshman.
     <div class="main">
       <div class="main-content">
         <div class="site-header">
+<!--
   <a href="https://cortmiem.github.io">
-  <img class="avatar" src="https://cortmiem.github.io/images/avatar.png?v=1597558438126" alt="">
+  <img class="avatar" src="https://cortmiem.github.io/images/avatar.png?v=1597983604873" alt="">
   </a>
   <h1 class="site-title">
     时光静好Demo
   </h1>
+-->
   <p class="site-description">
     僕は存在していなかった
   </p>
@@ -40,25 +43,37 @@ Freshman.
     
       
         <a href="/" class="menu">
-          首页
+          ホームページ
         </a>
       
     
       
         <a href="/archives" class="menu">
-          归档
+          アーカイブ
         </a>
       
     
       
         <a href="/tags" class="menu">
-          标签
+          ラベル
         </a>
       
     
       
         <a href="https://cortmiem.github.io/post/oshirase" class="menu">
-          关于
+          お知らせ
+        </a>
+      
+    
+      
+        <a href="https://cortmiem.gitee.io/megumi/" class="menu" target="_blank">
+          加藤恵
+        </a>
+      
+    
+      
+        <a href="https://cortmiem.github.io/post/message" class="menu">
+          伝言板
         </a>
       
     
@@ -181,7 +196,14 @@ Freshman.
         </div>
 
         
-
+    <div id="vcomments"></div>
+    <script>
+        new Valine({
+            el: '#vcomments',
+            appId: 'sqfCfeacoIYkQyqjUNFp7Fir-gzGzoHsz',
+            appKey: 'VYlaChugKgP3mflQmI6TI2Xr'
+        })
+    </script>
         
 
         <div class="site-footer">
