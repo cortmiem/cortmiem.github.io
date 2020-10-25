@@ -2,24 +2,21 @@
   <head>
     <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>お知らせ at Cortmiem - A blessing to this wonderful world!</title>
+<title>Android 搞机备忘录 at Cortmiem - A blessing to this wonderful world!</title>
 <link rel="shortcut icon" href="https://cortmiem.github.io/favicon.ico?v=1603623845890">
 <link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
 <link rel="stylesheet" href="https://cortmiem.github.io/styles/main.css">
-<link rel="alternate" type="application/atom+xml" title="お知らせ at Cortmiem - A blessing to this wonderful world! - Atom Feed" href="https://cortmiem.github.io/atom.xml">
+<link rel="alternate" type="application/atom+xml" title="Android 搞机备忘录 at Cortmiem - A blessing to this wonderful world! - Atom Feed" href="https://cortmiem.github.io/atom.xml">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
 <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
 
 
 
-    <meta name="description" content="
-关于与介绍
-Freshman.
-喜欢看番，刷机。
-大部分空闲时间用于二次元和操作系统的优化与调整。
-熟悉 C/C++、Python、Java、PHP 的拼写，
-了解 类Unix、Windows、MacOS 的开关机方式，
-精通 日本語Ｎ６..." />
+    <meta name="description" content="跳过谷歌开机向导
+dd if=/dev/zero of=/dev/block/bootdevice/by-name/frp
+
+一加 氧OS 转 氢OS （一加钱包、一加应用商店、一加云服务）
+persist.sys.oem.region=C..." />
     <meta name="keywords" content="" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
     <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
@@ -96,11 +93,11 @@ Freshman.
         <div class="post-detail">
           <article class="post">
             <h2 class="post-title">
-              お知らせ
+              Android 搞机备忘录
             </h2>
             <div class="post-info">
               <span>
-                2020-08-01
+                2020-10-24
               </span>
               <span>
                 1 min read
@@ -108,93 +105,46 @@ Freshman.
               
             </div>
             
+              <img class="post-feature-image" src="https://cortmiem.github.io/post-images/android-go.svg" alt="">
+            
             <div class="post-content-wrapper">
               <div class="post-content">
-                <figure data-type="image" tabindex="1"><img src="https://cortmiem.github.io/post-images/1596259399363.gif" alt="Avatar" loading="lazy"></figure>
-<h3 id="关于与介绍">关于与介绍</h3>
-<p>Freshman.</p>
-<p>喜欢看番，刷机。</p>
-<p>大部分空闲时间用于二次元和操作系统的优化与调整。</p>
-<p>熟悉 C/C++、Python、Java、PHP 的拼写，</p>
-<p>了解 类Unix、Windows、MacOS 的开关机方式，</p>
-<p>精通 日本語Ｎ６、香澄語十级，</p>
-<p>使用 Github Pages 建设该网站。</p>
-<hr>
-<h3 id="其它信息">其它信息</h3>
-<table>
-<thead>
-<tr>
-<th>联系方式</th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Mail 邮箱</td>
-<td><a href="mailto:co.m@live.com">co.m@live.com</a></td>
-</tr>
-<tr>
-<td>Coolapk 酷安</td>
-<td><a href="http://coolapk.com/u/529945">http://coolapk.com/u/529945</a></td>
-</tr>
-<tr>
-<td>OICQ 腾讯</td>
-<td><a href="tencent://message/?menu=yes&amp;uin=1909840468&amp;websitename=im.qq.com">1909840468</a> (<a href="http://wpa.qq.com/msgrd?v=3&amp;uin=1909840468&amp;site=qq&amp;menu=yes">http://wpa.qq.com/msgrd?v=3&amp;uin=1909840468&amp;site=qq&amp;menu=yes</a>)</td>
-</tr>
-<tr>
-<td>Telegram 电报</td>
-<td><a href="https://t.me/Cortmiem">https://t.me/Cortmiem</a></td>
-</tr>
-<tr>
-<td>bilibili 哔哩哔哩动画</td>
-<td><a href="https://space.bilibili.com/53133362">https://space.bilibili.com/53133362</a></td>
-</tr>
-<tr>
-<td>NeteaseMusic 网易云音乐</td>
-<td><a href="http://music.163.com/#/user/home?id=350113343">http://music.163.com/#/user/home?id=350113343</a></td>
-</tr>
-</tbody>
-</table>
-<hr>
-<table>
-<thead>
-<tr>
-<th>名词</th>
-<th>解释</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>时光静好Demo</td>
-<td>人生は素晴らしいでも</td>
-</tr>
-<tr>
-<td>Cortmiem</td>
-<td>Cortana+Min+レム</td>
-</tr>
-</tbody>
-</table>
+                <p><strong>跳过谷歌开机向导</strong></p>
+<pre><code>dd if=/dev/zero of=/dev/block/bootdevice/by-name/frp
+</code></pre>
+<p><strong>一加 氧OS 转 氢OS （一加钱包、一加应用商店、一加云服务）</strong></p>
+<pre><code>persist.sys.oem.region=CN //MagiskHide Props Config
+</code></pre>
+<p><strong>启用 Android 11 下拉状态栏毛玻璃特效</strong></p>
+<pre><code>su
+resetprop ro.surface_flinger.supports_background_blur 1
+pkill -TERM -f com. android.systemui
+/*重启失效。
+若要恢复，请将键值改回0，否则会造成 Magisk 模块 Immersive Gestural Navigation Bar不可用。
+若不可用，请多次尝试改变键值并软重启（语句三）。*/
+</code></pre>
+<p><strong>无 TWRP 禁用 Magisk 模块</strong></p>
+<blockquote>
+<p><a href="https://github.com/Oosl/Magisk_Disable_ALL_Modules">https://github.com/Oosl/Magisk_Disable_ALL_Modules</a></p>
+</blockquote>
 
               </div>
               <div class="toc-container">
-                <ul class="markdownIt-TOC">
-<li>
-<ul>
-<li>
-<ul>
-<li><a href="#%E5%85%B3%E4%BA%8E%E4%B8%8E%E4%BB%8B%E7%BB%8D">关于与介绍</a></li>
-<li><a href="#%E5%85%B6%E5%AE%83%E4%BF%A1%E6%81%AF">其它信息</a></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-
+                
               </div>
             </div>
           </article>
         </div>
 
+        
+          <div class="next-post">
+            <div class="next">下一篇</div>
+            <a href="https://cortmiem.github.io/post/narcissu/">
+              <h3 class="post-title">
+                ナルキッソス
+              </h3>
+            </a>
+          </div>
         
     <div id="vcomments"></div>
     <script>

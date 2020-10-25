@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://cortmiem.github.io</id>
     <title>时光静好Demo</title>
-    <updated>2020-08-21T04:20:27.917Z</updated>
+    <updated>2020-10-25T12:37:50.244Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://cortmiem.github.io"/>
     <link rel="self" href="https://cortmiem.github.io/atom.xml"/>
@@ -10,6 +10,32 @@
     <logo>https://cortmiem.github.io/images/avatar.png</logo>
     <icon>https://cortmiem.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, 时光静好Demo</rights>
+    <entry>
+        <title type="html"><![CDATA[Android 搞机备忘录]]></title>
+        <id>https://cortmiem.github.io/post/android-go/</id>
+        <link href="https://cortmiem.github.io/post/android-go/">
+        </link>
+        <updated>2020-10-24T13:04:17.000Z</updated>
+        <content type="html"><![CDATA[<p><strong>跳过谷歌开机向导</strong></p>
+<pre><code>dd if=/dev/zero of=/dev/block/bootdevice/by-name/frp
+</code></pre>
+<p><strong>一加 氧OS 转 氢OS （一加钱包、一加应用商店、一加云服务）</strong></p>
+<pre><code>persist.sys.oem.region=CN //MagiskHide Props Config
+</code></pre>
+<p><strong>启用 Android 11 下拉状态栏毛玻璃特效</strong></p>
+<pre><code>su
+resetprop ro.surface_flinger.supports_background_blur 1
+pkill -TERM -f com. android.systemui
+/*重启失效。
+若要恢复，请将键值改回0，否则会造成 Magisk 模块 Immersive Gestural Navigation Bar不可用。
+若不可用，请多次尝试改变键值并软重启（语句三）。*/
+</code></pre>
+<p><strong>无 TWRP 禁用 Magisk 模块</strong></p>
+<blockquote>
+<p><a href="https://github.com/Oosl/Magisk_Disable_ALL_Modules">https://github.com/Oosl/Magisk_Disable_ALL_Modules</a></p>
+</blockquote>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[ナルキッソス]]></title>
         <id>https://cortmiem.github.io/post/narcissu/</id>
@@ -1468,8 +1494,8 @@ ipconfig /flushdns
 位于“控制面板 - 网络和 Internet - 网络和共享中心 - 更改适配器设置”。</li>
 </ul>
 <p><strong>使用笔记本电脑的用户：</strong></p>
-<p>请确保你的笔记本电脑上的<strong>物理 Wi‑Fi 开关</strong>已打开。（当它处于打开状态时，指示灯通常会亮起。）<br>
-使用 Fiddler 4 解除 UWP 应用的网络隔离<br>
+<p>请确保你的笔记本电脑上的<strong>物理 Wi‑Fi 开关</strong>已打开。（当它处于打开状态时，指示灯通常会亮起。）</p>
+<p><strong>使用 Fiddler 4 解除 UWP 应用的网络隔离：</strong><br>
 位于“Fiddler 4 - winConfig - Exempt All - Save Changes”。</p>
 ]]></content>
     </entry>
