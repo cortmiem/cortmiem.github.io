@@ -3,7 +3,7 @@
     <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Android 搞机备忘录 at Cortmiem - A blessing to this wonderful world!</title>
-<link rel="shortcut icon" href="https://cortmiem.github.io/favicon.ico?v=1612069362649">
+<link rel="shortcut icon" href="https://cortmiem.github.io/favicon.ico?v=1612358788876">
 <link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
 <link rel="stylesheet" href="https://cortmiem.github.io/styles/main.css">
 <link rel="alternate" type="application/atom+xml" title="Android 搞机备忘录 at Cortmiem - A blessing to this wonderful world! - Atom Feed" href="https://cortmiem.github.io/atom.xml">
@@ -14,9 +14,10 @@
 
     <meta name="description" content="跳过谷歌开机向导
 dd if=/dev/zero of=/dev/block/bootdevice/by-name/frp
+fastboot erase frp
 
 一加 氧OS 转 氢OS （一加钱包、一加应用商店、一加云服务）
-persist.sys.oem.region=C..." />
+persi..." />
     <meta name="keywords" content="" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
     <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
@@ -27,7 +28,7 @@ persist.sys.oem.region=C..." />
         <div class="site-header">
 <!--
   <a href="https://cortmiem.github.io">
-  <img class="avatar" src="https://cortmiem.github.io/images/avatar.png?v=1612069362649" alt="">
+  <img class="avatar" src="https://cortmiem.github.io/images/avatar.png?v=1612358788876" alt="">
   </a>
   <h1 class="site-title">
     时光静好Demo
@@ -105,6 +106,7 @@ persist.sys.oem.region=C..." />
               <div class="post-content">
                 <p><strong>跳过谷歌开机向导</strong></p>
 <pre><code>dd if=/dev/zero of=/dev/block/bootdevice/by-name/frp
+fastboot erase frp
 </code></pre>
 <p><strong>一加 氧OS 转 氢OS （一加钱包、一加应用商店、一加云服务）</strong></p>
 <pre><code>persist.sys.oem.region=CN //MagiskHide Props Config
